@@ -4,14 +4,14 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="8.343">
+           time="8.659">
   <properties />
-            <testcase name="TC_02_NopBaiKyNang" time="5.275" classname="LoginLMS.NopBaiTapKyNang">
+            <testcase name="TC_03_NopBaiKyNang" time="5.857" classname="LoginLMS.NopBaiTapKyNang">
                 <failure type="java.lang.NullPointerException"
                   message="(null)"
               >
 <![CDATA[java.lang.NullPointerException
-  LoginLMS.NopBaiTapKyNang.TC_02_NopBaiKyNang(NopBaiTapKyNang.java:56)
+  LoginLMS.NopBaiTapKyNang.TC_03_NopBaiKyNang(NopBaiTapKyNang.java:67)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -42,6 +42,6 @@
           </testcase>
   
   
-            <testcase name="TC_01_Login_HV" time="3.068" classname="LoginLMS.NopBaiTapKyNang" />
+            <testcase name="TC_01_Login_HV" time="2.802" classname="LoginLMS.NopBaiTapKyNang" />
       
 </testsuite>
