@@ -7,9 +7,11 @@ import PageObject.HomeAtions;
 import PageObject.KeHoachHocTapMonAction;
 import PageObject.LoginActions;
 import PageObject.LopHocPageAction;
+import PageObject.LuyenTapTracNghiemAction;
 import PageObject.PageHDSDAction;
 import TVU.AbstractPageUI;
 import TVU.LoginUI;
+import TVU.LopHocUI;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -30,7 +32,7 @@ public class LamBaiTracNghiem extends AbstractTest {
 	private HomeAtions homeAction;
 	private LopHocPageAction lopHocAction;
 	private PageManageDriver pageManagerDriver;
-	private PageHDSDAction pageHDSD;
+	private LuyenTapTracNghiemAction LuyenTracNghiem;
 
 	String url = "http://elearning.tvu.topica.vn/login/index.php";
 
@@ -63,22 +65,23 @@ public class LamBaiTracNghiem extends AbstractTest {
 		// b4: verify message
 		log.info("kiem tra message thong bao");
 		// homeAction.verifyMessageDisplayed();
-		Assert.assertTrue(homeAction.verifyMessageDisplayed(),"QUẢN LÝ HỌC TẬP!");
+		//Assert.assertTrue(homeAction.verifyMessageDisplayed(),"QUẢN LÝ HỌC TẬP!");
 	}
 
 	@Test
-	public void TC_02_Vaolop_MoGiaoTrinh_kehoachhoctapmon() {
+	public void TC_02_LamBaiTracNghiem() {
 		/*
 		 * open home Lop hoc lay bien lopHocAction để hứng giá trị khi click button
 		 * LopHoc tren trang home ham openLophocpage: được viết ở HomeActions
 		 */
-		lopHocAction = homeAction.openLophocpage(driver);
+		lopHocAction = homeAction.openLophocpage(driver,AbstractPageUI.BTN_VAO_LOP,"/course/view.php?id=6413");
 		/*
 		 * open home Lop hoc lay bien lopHocAction để hứng giá trị khi click button
 		 * LopHoc tren trang home ham openLophocpage: được viết ở HomeActions
 		 */
-		pageHDSD = lopHocAction.openPageTaiLieu(driver,AbstractPageUI.DYNAMIC_LINK_HDSD,"Kế hoạch học tập môn");
-		pageHDSD.back(driver);
+	     lopHocAction.clicktoElement(driver, LopHocUI.LINK_BAI_TRAC_NGHIEM);
+	     LuyenTracNghiem.clicktoElement(driver, AbstractPageUI.BTN_LAM_BAI);
+	
 		
 	}
 

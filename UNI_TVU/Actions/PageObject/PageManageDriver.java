@@ -7,6 +7,7 @@ public class PageManageDriver {
 	private static HomeAtions homepage;
 	private static LopHocPageAction lophocpage;
 	private static PageHDSDAction pageHDSD;
+	private static NopBaiKyNangAction pageNopBaiKyNang;
 	//private static Page
 
 	public static LoginActions getLoginPage(WebDriver driver) {
@@ -37,5 +38,10 @@ public class PageManageDriver {
 		}
 		return pageHDSD;
 	}
-
+	public static NopBaiKyNangAction getpageNopBaiKyNang(WebDriver driver) {
+		if (pageNopBaiKyNang == null) {
+			return new NopBaiKyNangAction(driver);
+		}
+		return pageNopBaiKyNang;
+	}
 }

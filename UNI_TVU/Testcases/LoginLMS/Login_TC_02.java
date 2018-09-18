@@ -87,7 +87,7 @@ public void TC_02_Vaolop_kehoachhoctap(){
 	 *  lay bien lopHocAction để hứng giá trị khi click button LopHoc tren trang home
 	 *  ham openLophocpage: được viết ở HomeActions 
 	 */ 
-	lopHocAction = homeAction.openLophocpage(driver);
+	lopHocAction = homeAction.openLophocpage(driver,AbstractPageUI.BTN_VAO_LOP,"/course/view.php?id=6413");
 	/*
 	 *  open home Lop hoc
 	 *  lay bien lopHocAction để hứng giá trị khi click button LopHoc tren trang home
@@ -119,7 +119,7 @@ public void TC_04_Vaolop_HDSD_chupmanhinh(){
 	 *  lay bien lopHocAction để hứng giá trị khi click button LopHoc tren trang home
 	 *  ham openLophocpage: được viết ở HomeActions 
 	 */ 
-	lopHocAction = homeAction.openLophocpage(driver);
+	//lopHocAction = homeAction.openLophocpage(driver);
 	/*
 	 *  open home Lop hoc
 	 *  lay bien lopHocAction để hứng giá trị khi click button LopHoc tren trang home
@@ -134,7 +134,7 @@ public void TC_05_Vaolop_HDSD_giainen(){
 	 *  lay bien lopHocAction để hứng giá trị khi click button LopHoc tren trang home
 	 *  ham openLophocpage: được viết ở HomeActions 
 	 */ 
-	lopHocAction = homeAction.openLophocpage(driver);
+//	lopHocAction = homeAction.openLophocpage(driver);
 	/*
 	 *  open home Lop hoc
 	 *  lay bien lopHocAction để hứng giá trị khi click button LopHoc tren trang home

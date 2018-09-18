@@ -10,7 +10,7 @@
 		<parameter name="browser" value="Chrome" />
 		<classes>
 			
-			<class name="LoginLMS.Login_TC_03_POM" />
+			<class name="LoginLMS.NopBaiTapKyNang" />
 		</classes>
 	</test>
 </suite> 

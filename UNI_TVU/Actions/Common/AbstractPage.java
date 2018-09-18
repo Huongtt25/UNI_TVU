@@ -188,9 +188,9 @@ public class AbstractPage {
 			WebDriverWait wait=new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.alertIsPresent());
 		}
-		public LopHocPageAction openLophocpage(WebDriver driver) {
+		public LopHocPageAction openLophocpage(WebDriver driver, String locator, String btn_vaolophoc) {
 			//waitForInVisible(driver, HomeUI.BTN_VAO_LOP);
-			clicktoElement(driver, AbstractPageUI.BTN_VAO_LOP);
+			clicktoElement(driver, AbstractPageUI.BTN_VAO_LOP, btn_vaolophoc);
 			return PageManageDriver.getLopHocPage(driver);
 		} 
 		public PageHDSDAction openPageHDSD(WebDriver driver, String locator, String page) {

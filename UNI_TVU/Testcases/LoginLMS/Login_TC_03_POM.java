@@ -73,7 +73,7 @@ public class Login_TC_03_POM extends AbstractTest {
 		 * open home Lop hoc lay bien lopHocAction để hứng giá trị khi click button
 		 * LopHoc tren trang home ham openLophocpage: được viết ở HomeActions
 		 */
-		lopHocAction = homeAction.openLophocpage(driver);
+		lopHocAction = homeAction.openLophocpage(driver,AbstractPageUI.BTN_VAO_LOP,"/course/view.php?id=6413");
 		/*
 		 * open home Lop hoc lay bien lopHocAction để hứng giá trị khi click button
 		 * LopHoc tren trang home ham openLophocpage: được viết ở HomeActions
@@ -88,7 +88,7 @@ public class Login_TC_03_POM extends AbstractTest {
 		 * open home Lop hoc lay bien lopHocAction để hứng giá trị khi click button
 		 * LopHoc tren trang home ham openLophocpage: được viết ở HomeActions
 		 */
-		lopHocAction = homeAction.openLophocpage(driver);
+	//	lopHocAction = homeAction.openLophocpage(driver);
 		/*
 		 * open home Lop hoc lay bien lopHocAction để hứng giá trị khi click button
 		 * LopHoc tren trang home ham openLophocpage: được viết ở HomeActions
