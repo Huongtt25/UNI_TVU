@@ -15,6 +15,9 @@ import TVU.NopBaiKyNangUI;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 
@@ -26,7 +29,8 @@ public class NopBaiTapKyNang extends AbstractTest {
 	private LopHocPageAction lopHocAction;
 	private PageManageDriver pageManagerDriver;
 	private NopBaiKyNangAction NopBaiKyNang;
-
+	String workingDirectory= System.getProperty("user.dir");
+	String filePath= workingDirectory + "\\FileUpload\\checklist.xlsx";
 	String url = "http://elearning.tvu.topica.vn/login/index.php";
 
   @Test
@@ -47,15 +51,24 @@ public class NopBaiTapKyNang extends AbstractTest {
 				//Assert.assertTrue(homeAction.verifyMessageDisplayed(),"QUẢN LÝ HỌC TẬP!");
 	  
   }
- @Test
 	  public void TC_02_NopBaiKyNang() throws InterruptedException {
 	 
 	 lopHocAction = homeAction.openLophocpage(driver,AbstractPageUI.BTN_VAO_LOP,"/course/view.php?id=4364");
 	 lopHocAction.clicktoElement(driver, LopHocUI.LINK_NOP_BAI_KY_NANG);
-	 Thread.sleep(3000);
-	 NopBaiKyNang.UploadFile();
+	// NopBaiKyNang.UploadFile();
 	 
  }	
+ @Test
+ public void TC_03_NopBaiKyNang() throws InterruptedException, IOException {
+
+lopHocAction = homeAction.openLophocpage(driver,AbstractPageUI.BTN_VAO_LOP,"/course/view.php?id=4364");
+lopHocAction.clicktoElement(driver, LopHocUI.LINK_NOP_BAI_KY_NANG);
+Thread.sleep(3000);
+NopBaiKyNang.clicktoElement(driver, NopBaiKyNangUI.BTN_UPLOAD_FILE);
+Runtime.getRuntime().exec(new String[] { ".\\AutoIT\\chrome.exe", filePath });
+
+
+}	
   @Parameters("browser")
   @BeforeClass
   public void beforeClass(String browserName) {
