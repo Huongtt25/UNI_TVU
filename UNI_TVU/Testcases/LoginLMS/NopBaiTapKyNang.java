@@ -18,7 +18,9 @@ import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
 public class NopBaiTapKyNang extends AbstractTest {
@@ -64,7 +66,9 @@ public class NopBaiTapKyNang extends AbstractTest {
 lopHocAction = homeAction.openLophocpage(driver,AbstractPageUI.BTN_VAO_LOP,"/course/view.php?id=4364");
 lopHocAction.clicktoElement(driver, LopHocUI.LINK_NOP_BAI_KY_NANG);
 Thread.sleep(3000);
-NopBaiKyNang.clicktoElement(driver, NopBaiKyNangUI.BTN_UPLOAD_FILE);
+WebElement element=driver.findElement(By.cssSelector(".table_list>tbody>tr>td>input"));
+element.click();
+Thread.sleep(3000);
 Runtime.getRuntime().exec(new String[] { ".\\AutoIT\\chrome.exe", filePath });
 
 
